@@ -1,0 +1,37 @@
+.header {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #BDBEBF;
+    margin-bottom: 2rem;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 12px;
+}
+
+.container ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.brand-wrap {
+    display: flex;
+    gap: 1rem;
+}
+
+.bran-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-up {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-down {
+    font-size: 12px;
+}

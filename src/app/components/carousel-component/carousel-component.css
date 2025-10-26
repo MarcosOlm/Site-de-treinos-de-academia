@@ -1,0 +1,108 @@
+.carousel {
+    height: 400px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.carousel-wrap .img {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.carousel-wrap img {
+    width: min(100% - 32px, 1400px);
+    height: 400px;
+    border-radius: 20px;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.carousel-text {
+    position: absolute;
+    display: block;
+    width: min(100% - 32px, 1400px);
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.carousel-text h2 {
+    color: #FFF;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.carousel-text p {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.arrow {
+    width: min(100% - 32px, 1400px);
+    height: 400px;
+    padding: 14px;
+    display: block;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow button {
+    padding: 10px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #f7f7f76b;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.arrow img {
+    width: 25px;
+    height: 25px;
+}
+
+.bnt-nav-wrap {
+    width: min(100% - 32px, 1400px);
+    height: 400px;
+    display: block;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1.3rem;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+.bnt-nav {
+    width: 30px;
+    height: 10px;
+    border: 1px solid #FFF;
+    padding: 5px 15px;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.bnt-nav-wrap .ativo {
+    width: 30px;
+    height: 10px;
+    border: 1px solid #FFF;
+    padding: 5px 15px;
+    border-radius: 8px;
+    background-color: #FFF;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.bnt-nav:hover {
+    background-color: #FFF;
+}

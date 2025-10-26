@@ -1,0 +1,47 @@
+.day-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.day-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 6rem;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    gap: .5rem;
+}
+
+.day-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.bnt-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.day {
+    width: 15px;
+    height: 15px;
+    padding: 8px;
+    border-radius: 50%;
+    border: 0;
+    outline: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.ativo {
+    background-color: #0b0b0b;
+}

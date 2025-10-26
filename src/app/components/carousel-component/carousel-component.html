@@ -1,0 +1,25 @@
+<section class="carousel">
+    <div class="container">
+        <div class="carousel-wrap">
+            <div class="img">
+                <img [src]="imagens[indiceAtual]" alt="">
+            </div>
+
+            <div class="carousel-text">
+                    <h2>Tranforme seu corpo</h2>
+                    <p>Acompanhe seu treinos e alcance seus objetivos</p>
+            </div>
+
+            <div class="arrow">
+                <button (click)="before()"><img src="angle-left-solid-full.svg" alt=""></button>
+                <button (click)="after()"><img src="angle-right-solid-full.svg" alt=""></button>
+            </div>
+
+            <div class="bnt-nav-wrap">
+                <button class="bnt-nav" [class.ativo]='indiceAtual === 0' (click)="bntNav(0)"></button>
+                <button class="bnt-nav" [class.ativo]='indiceAtual === 1' (click)="bntNav(1)"></button>
+                <button class="bnt-nav" [class.ativo]='indiceAtual === 2' (click)="bntNav(2)"></button>
+            </div>
+        </div>
+    </div>
+</section>
