@@ -1,3 +1,7 @@
+main {
+    margin-bottom: 8rem;
+}
+
 .day-wrap {
     display: flex;
     flex-direction: column;

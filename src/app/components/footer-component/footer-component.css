@@ -1,0 +1,25 @@
+.footer {
+    background-color: rgb(248, 134, 53);
+    height: 280px;
+    color: white;
+}
+
+.footer-wrap {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+}
+
+.text {
+    width: 280px;
+}
+
+.text p {
+    font-size: 13px;
+}
+
+.copy-right {
+    align-self: flex-end;
+    justify-self: center;
+}

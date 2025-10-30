@@ -16,9 +16,9 @@
             </div>
 
             <div class="bnt-nav-wrap">
-                <button class="bnt-nav" [class.ativo]='indiceAtual === 0' (click)="bntNav(0)"></button>
-                <button class="bnt-nav" [class.ativo]='indiceAtual === 1' (click)="bntNav(1)"></button>
-                <button class="bnt-nav" [class.ativo]='indiceAtual === 2' (click)="bntNav(2)"></button>
+                @for (item of imagens; track $index){
+                    <button class="bnt-nav" [class.ativo]='indiceAtual === $index' (click)="bntNav($index)"></button>
+                }
             </div>
         </div>
     </div>

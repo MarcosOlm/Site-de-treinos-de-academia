@@ -8,6 +8,9 @@ import { CardTrainingComponent } from '../card-training-component/card-training-
   styleUrl: './training-component.css',
 })
 export class TrainingComponent {
+  day: String = 'Segunda';
 
-  
+  bntDayOfWeek(day: String) {
+    this.day = day;
+  }
 }
