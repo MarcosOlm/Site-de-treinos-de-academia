@@ -5,20 +5,27 @@
                 <h2>Escolha o Dia</h2>
 
                 <div class="day-option">
-                    <div class="bnt-wrap"><button class="day" [class.ativo]="day === 'Segunda'" (click)="bntDayOfWeek('Segunda')"></button><span>Seg</span></div>
-                    <div class="bnt-wrap"><button class="day" [class.ativo]="day === 'Terça'" (click)="bntDayOfWeek('Terça')"></button><span>Ter</span></div>
-                    <div class="bnt-wrap"><button class="day" [class.ativo]="day === 'Quarta'" (click)="bntDayOfWeek('Quarta')"></button><span>Qua</span></div>
-                    <div class="bnt-wrap"><button class="day" [class.ativo]="day === 'Quinta'" (click)="bntDayOfWeek('Quinta')"></button><span>Qui</span></div>
-                    <div class="bnt-wrap"><button class="day" [class.ativo]="day === 'Sexta'" (click)="bntDayOfWeek('Sexta')"></button><span>Sex</span></div>
-                    <div class="bnt-wrap"><button class="day" [class.ativo]="day === 'Sábado'" (click)="bntDayOfWeek('Sábado')"></button><span>Sab</span></div>
-                    <div class="bnt-wrap"><button class="day" [class.ativo]="day === 'Domingo'" (click)="bntDayOfWeek('Domingo')"></button><span>Dom</span></div>
+                    @for (item of [].constructor(7); track $index){
+                        <button class="day" [class.ativo]="$index === ativo" (click)="bntDayOfWeek($index)"></button>
+                    }
+                </div>
+                <div class="day-name-wrap">
+                    <span class="day-name">Seg</span>
+                    <span class="day-name">Ter</span>
+                    <span class="day-name">Qua</span>
+                    <span class="day-name">Qui</span>
+                    <span class="day-name">Sex</span>
+                    <span class="day-name">Sab</span>
+                    <span class="day-name">Dom</span>
                 </div>
             </section>
 
             <div class="card-area">
-                <app-card-training-component
-                [dayOfWeek] = "day"
-                ></app-card-training-component>
+                <a routerLink="/workout">
+                    <app-card-training-component
+                    [dayOfWeek] = "day"
+                    ></app-card-training-component>
+                </a>
             </div>
         </div>
     </div>

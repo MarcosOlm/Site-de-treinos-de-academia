@@ -2,25 +2,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: fit-content;
-    height: 350px;
+    height: 450px;
     border: 1px solid #ccc;
     border-radius: 12px;
-    padding: 10px 24px;
+    padding: 30px 24px;
 }
 
 .card svg {
     height: 20px;
 }
 
-.titulo {
+.title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.day-match {
+    font-size: 18px;
+}
+
+.title {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.tipo {
+.type {
     display: flex;
     gap: 0.5rem;
 }

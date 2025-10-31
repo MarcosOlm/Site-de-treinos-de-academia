@@ -4,11 +4,19 @@
     color: white;
 }
 
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 280px;  
+}
+
 .footer-wrap {
     display: flex;
     align-items: start;
     justify-content: space-around;
-    padding-top: 1.5rem;
+    padding: 1.5rem 0 3rem 0;
+    border-bottom: 1px solid #ccc;
 }
 
 .text {
@@ -20,6 +28,5 @@
 }
 
 .copy-right {
-    align-self: flex-end;
-    justify-self: center;
+    align-self: center;
 }
