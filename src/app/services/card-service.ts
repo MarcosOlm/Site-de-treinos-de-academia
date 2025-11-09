@@ -4,6 +4,7 @@ import { Card } from '../interface/Card';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CardService {
   private url = 'http://localhost:8080/treinos'
   

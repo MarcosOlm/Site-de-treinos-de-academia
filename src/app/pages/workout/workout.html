@@ -1,5 +1,6 @@
 <div class="container">
-    <h1>Veja seu treino mais de perto</h1>
+    <h1 *ngIf="userType == 'Aluno'">Veja seu treino mais de <span class="orange">perto</span></h1>
+    <h1 *ngIf="userType == 'Personal'">Faça o <span class="orange">melhor</span> treino para seu Aluno</h1>
     <div class="cards">
         <div class="card-area">
             <app-card-training-component

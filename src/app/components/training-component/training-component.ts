@@ -12,7 +12,7 @@ import { UserService } from '../../services/user-service';
 export class TrainingComponent implements OnInit{
   day: String = 'Segunda';
   ativo: number = 0;
-  isLoginUser: String =''
+  isLoginUser: String ='';
 
   constructor(private userService: UserService) {}
 

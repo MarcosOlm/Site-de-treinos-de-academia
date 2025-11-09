@@ -19,12 +19,36 @@
     border-bottom: 1px solid #ccc;
 }
 
-.text {
-    width: 280px;
+.branch-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 330px;
 }
 
-.text p {
-    font-size: 13px;
+.branch-wrap p {
+    font-size: 15px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+
+.social-midia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 40px;
+    color: white;
+    cursor: pointer;
+    margin-top: .5rem;
 }
 
 .copy-right {

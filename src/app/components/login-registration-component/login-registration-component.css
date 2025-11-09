@@ -22,7 +22,7 @@
     text-align: center;
 }
 
-svg {
+img {
     width: 100px;
 }
 
@@ -83,6 +83,7 @@ form button {
     color: white;
     border: none;
     margin: auto;
+    cursor: pointer;
 }
 
 label {

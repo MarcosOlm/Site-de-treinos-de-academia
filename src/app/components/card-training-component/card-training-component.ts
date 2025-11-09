@@ -12,15 +12,15 @@ import { RouterModule } from '@angular/router';
 })
 export class CardTrainingComponent implements OnInit, OnChanges {
   @Input("dayOfWeek") dayOfWeek!: String
+  id: number = 0
+  userType: String = ''
   cardNow: Card = {
     id: 0,
     titulo: '',
     tipoTreino: '',
     treinos: []
   }
-  id: number = 0
-  userType: String = ''
-
+  
   constructor(private cardService: CardService, private user:UserService) {}
 
   ngOnInit(): void {

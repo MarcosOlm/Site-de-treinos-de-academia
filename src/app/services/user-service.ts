@@ -27,11 +27,4 @@ export class UserService {
     this.user.tipo = newUser.tipo
     return newUser
   }
-
-  deleteUser() {
-    this.user.nome = ''
-    this.user.email = ''
-    this.user.senha = ''
-    this.user.tipo = ''
-  }
 }

@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { User } from '../../interface/User';
 import { UserService } from '../../services/user-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-registration-component',
@@ -10,15 +11,26 @@ import { UserService } from '../../services/user-service';
   templateUrl: './login-registration-component.html',
   styleUrl: './login-registration-component.css',
 })
+
 export class LoginRegistrationComponent implements OnInit{
   form!: FormGroup
   isLoginMode = true
   @Input('user') user!: String;
 
-  constructor(private fb: FormBuilder, private userService: UserService) {}
+  constructor(private fb: FormBuilder, private userService: UserService, private route: Router) {}
 
   ngOnInit(): void {
       this.setupForm()
+  }
+
+  onSubmit() {
+    this.form.markAllAsTouched();
+    if (this.form.valid){
+      let NewUser: User = this.form.value as User;
+      NewUser = {...NewUser, tipo: this.user}
+      this.userService.createUser(NewUser)
+      this.goHome()
+    }
   }
 
   setupForm() {
@@ -33,12 +45,7 @@ export class LoginRegistrationComponent implements OnInit{
     this.isLoginMode = !this.isLoginMode;
   }
 
-  onSubmit() {
-    this.form.markAllAsTouched();
-    if (this.form.valid){
-      let NewUser: User = this.form.value as User;
-      NewUser = {...NewUser, tipo: this.user}
-      this.userService.createUser(NewUser)
-    }
+  goHome() {
+    this.route.navigate(['/'])
   }
 }
