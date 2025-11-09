@@ -1,1 +1,20 @@
-<app-card-training-component></app-card-training-component>
+<div class="container">
+    <h1>Veja seu treino mais de perto</h1>
+    <div class="cards">
+        <div class="card-area">
+            <app-card-training-component
+            [dayOfWeek] = "day"
+            ></app-card-training-component>
+        </div>
+        @if (userType == 'Aluno') {
+            <div class="review">
+            <app-review-component></app-review-component>
+            </div>
+        }
+        @else {
+            <app-change-card-component
+            [dayOfWeek] = "day"
+            ></app-change-card-component>
+        }
+    </div>
+</div>

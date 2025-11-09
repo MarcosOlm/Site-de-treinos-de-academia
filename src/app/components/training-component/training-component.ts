@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardTrainingComponent } from '../card-training-component/card-training-component';
 import { RouterModule } from '@angular/router';
+import { UserService } from '../../services/user-service';
 
 @Component({
   selector: 'app-training-component',
@@ -8,9 +9,17 @@ import { RouterModule } from '@angular/router';
   templateUrl: './training-component.html',
   styleUrl: './training-component.css',
 })
-export class TrainingComponent {
+export class TrainingComponent implements OnInit{
   day: String = 'Segunda';
   ativo: number = 0;
+  isLoginUser: String =''
+
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+      this.isLoginUser = this.userService.getTypeUser()
+      console.log(this.isLoginUser)
+  }
 
   bntDayOfWeek(day: number) {
     switch (day) {

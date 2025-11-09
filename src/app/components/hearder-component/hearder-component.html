@@ -7,12 +7,14 @@
                 <a href="" class="brand-down">seus treinos da semana</a>
             </div>
         </div>
-        <nav class="primary-nav">
-            <ul>
-                <li><a href="">Treinos</a></li>
-                <li><a href="">Comentários</a></li>
-                <li><a href="">Contato</a></li>
-            </ul>
-        </nav>
+        @if (typeUser == '') {
+            <div class="login-registration">
+                <a [routerLink]="['/login-registration', 'Aluno']" class="login-registration-student">Aluno</a>
+                <a [routerLink]="['/login-registration', 'Personal']" class="login-registration-personal">Personal</a>
+            </div>
+        }
+        @else {
+            <a onclick="location.reload()">sair</a>
+        }
     </div>
 </header>

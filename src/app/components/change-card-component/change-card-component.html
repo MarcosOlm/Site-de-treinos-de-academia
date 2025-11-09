@@ -1,0 +1,45 @@
+<section class="change-card">
+    <form class="change-card-wrap" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <select name="" id="" (change)="isDeleteModeChange($event)" class="select-option">
+            <option value="create">Criar card</option>
+            <option value="update">Alterar card</option>
+            <option value="delete">Excluir card</option>
+        </select>
+        <div class="content-card">
+            @if (isDeleteMode == false) {
+            <div class="titulo-wrap">
+                <label for="titulo">Titulo do treino: </label>
+                <input type="text" id="titulo" formControlName="titulo">
+            </div>
+            <div class="tipoTreino-wrap">
+                <label for="tipoTreino">Tipo do treino: </label>
+                <input type="text" id="tipoTreino" formControlName="tipoTreino">
+            </div>
+            <div class="quantTreinos-wrap">
+                <label for="quantTreinos">Quantos treinos? </label>
+                <div class="increase">
+                    <button type="button" (click)="decreaseTreinos()" class="btn-increase"> - </button> {{quantTreinos}} <button type="button" (click)="increaseTreino()" class="btn-increase"> + </button>
+                </div>
+            </div>
+            <div class="treinos-wrap" formArrayName="treinos">
+            @for (item of treino.controls; track $index) {
+                    <div class="treinos-area" [formGroupName]="$index">
+                        <div class="name-wrap">
+                            <label for="nome">Digite o nome: </label>
+                            <input type="text" id="name" formControlName="nome">
+                        </div>
+                        <div class="quant-wrap">
+                            <label for="quant">Digite a quantidade: </label>
+                            <input type="text" id="quant" formControlName="quant">
+                        </div>
+                    </div>
+                }
+            </div>
+            <button type="submit" class="btn-submit">Enviar</button>
+            }@else {
+                <h1>Você deseja excluir esse treino?</h1>
+                <button type="submit" class="btn-submit">excluir</button>
+            }
+        </div>
+    </form>
+</section>

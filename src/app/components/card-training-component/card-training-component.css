@@ -1,3 +1,5 @@
+:host {
+    
 .card {
     display: flex;
     flex-direction: column;
@@ -20,8 +22,22 @@
     gap: 5px;
 }
 
+.text {
+    display: flex;
+    gap: 5px;
+}
+
+h1 {
+    display: inline-block;
+}
+
 .day-match {
     font-size: 18px;
+}
+
+.day {
+    font-size: 18px;
+    color: rgb(248, 134, 53);
 }
 
 .title {
@@ -46,4 +62,25 @@
     align-items: center;
     justify-content: space-between;
     margin: 10px 0;
+}
+
+.null-treino {
+    margin: 5rem 0;
+}
+
+.create-Treino {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 500px;
+}
+
+a {
+    background-color: rgb(248, 134, 53);
+    padding: 12px 32px;
+    border-radius: 12px;
+}
+
 }

@@ -35,3 +35,27 @@
 .brand-down {
     font-size: 12px;
 }
+
+.login-registration{
+    display: flex;
+    gap: 1rem;
+}
+
+.login-registration-student{
+    width: 100px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-registration-personal{
+    background-color: rgb(248, 134, 53);
+    color: white;
+    width: 100px;
+    text-align: center;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
