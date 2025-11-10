@@ -35,4 +35,5 @@ button {
     border: none;
     border-radius: 8px;
     background-color: rgb(248, 134, 53);
+    cursor: pointer;
 }

@@ -17,11 +17,15 @@
     padding: 10px 0;
 }
 
-.select-option {
+select {
     width: 70%;
     margin: 0 auto;
     padding: 10px 12px;
     border-radius: 8px;
+}
+
+select:focus {
+    outline: none;
 }
 
 .content-card {
@@ -54,6 +58,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444444;
 }
 
 .treinos-area {
